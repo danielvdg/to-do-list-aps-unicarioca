@@ -1,13 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/index.css">
-    
+    <title>Todo List</title>
+    <link rel="stylesheet" href="src/content/content.css">
 </head>
 <body>
-    
+    <div class="todo-container">
+        <h1>📝 Minha Lista de Tarefas</h1>
+        
+        <div class="input-container">
+            <input 
+                type="text" 
+                id="todo-input" 
+                placeholder="Adicione uma nova tarefa..."
+                autocomplete="off"
+            >
+            <button id="add-btn">Adicionar</button>
+        </div>
+
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">Todas</button>
+            <button class="filter-btn" data-filter="active">Ativas</button>
+            <button class="filter-btn" data-filter="completed">Concluídas</button>
+        </div>
+
+        <ul id="todo-list"></ul>
+
+        <div class="task-counter">
+            <span id="task-count">0 tarefas</span>
+        </div>
+    </div>
+
+    <script src="src/content/content.js"></script>
 </body>
 </html>
